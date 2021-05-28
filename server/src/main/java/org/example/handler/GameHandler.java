@@ -1,6 +1,8 @@
-package org.example;
+package org.example.handler;
 
+import com.english.quiz.dto.AnswerMessage;
 import com.english.quiz.dto.Message;
+import org.example.Game;
 
 import javax.websocket.Session;
 import java.util.Map;
@@ -32,7 +34,9 @@ public class GameHandler {
     }
 
     public void processMessage(final Session session, final Message message) {
-        Game game = gameMap.get(session);
-        game.processClientAnswer(message);
+        if (message instanceof AnswerMessage) {
+            Game game = gameMap.get(session);
+            game.processClientAnswer((AnswerMessage) message);
+        }
     }
 }

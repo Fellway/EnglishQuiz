@@ -1,10 +1,7 @@
 package org.example.factory;
 
 
-import com.english.quiz.dto.Message;
-import com.english.quiz.dto.MessageType;
-import com.english.quiz.dto.QuestionMessage;
-import com.english.quiz.dto.WelcomeMessage;
+import com.english.quiz.dto.*;
 
 public class MessageFactory {
 
@@ -22,6 +19,8 @@ public class MessageFactory {
                 return new WelcomeMessage();
             case QUESTION:
                 return new QuestionMessage(messageDescriptor.getQuestionEntity().getQuestion());
+            case END_GAME:
+                return new EndGameMessage(messageDescriptor.getPoints(), messageDescriptor.getTime());
         }
         return null;
     }

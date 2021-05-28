@@ -1,7 +1,7 @@
 package org.example.service;
 
-import org.example.DbMock;
 import org.example.model.db.QuestionEntity;
+import org.example.repository.DbMock;
 
 import java.util.List;
 

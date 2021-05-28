@@ -1,10 +1,8 @@
 package org.example.api;
 
 import com.english.quiz.dto.Message;
-import org.example.GameHandler;
-import org.example.MessageDecoder;
-import org.example.MessageEncoder;
-import org.example.SessionHandler;
+import org.example.handler.GameHandler;
+import org.example.handler.SessionHandler;
 
 import javax.websocket.*;
 import javax.websocket.server.PathParam;

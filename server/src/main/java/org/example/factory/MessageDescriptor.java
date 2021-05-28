@@ -14,4 +14,6 @@ import org.example.model.db.QuestionEntity;
 public class MessageDescriptor {
     private MessageType messageType;
     private QuestionEntity questionEntity;
+    private Long time;
+    private Double points;
 }

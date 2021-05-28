@@ -1,4 +1,4 @@
-package org.example;
+package org.example.handler;
 
 import javax.websocket.Session;
 import java.io.IOException;

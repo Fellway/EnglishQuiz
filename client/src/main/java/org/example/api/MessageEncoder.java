@@ -1,4 +1,4 @@
-package org.example;
+package org.example.api;
 
 import com.english.quiz.dto.Message;
 import com.google.gson.Gson;

@@ -1,8 +1,7 @@
-package org.example;
+package org.example.api;
 
 import com.english.quiz.dto.Message;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.example.Client;
 
 import javax.websocket.*;
 import java.io.IOException;
@@ -10,7 +9,6 @@ import java.io.IOException;
 @javax.websocket.ClientEndpoint(encoders = MessageEncoder.class)
 public class ClientEndpoint {
 
-    private final static Logger LOGGER = LogManager.getLogger(ClientEndpoint.class);
     private final MessageDecoder messageDecoder;
     private Client sender;
 

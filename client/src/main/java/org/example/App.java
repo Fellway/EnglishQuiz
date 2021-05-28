@@ -1,6 +1,7 @@
 package org.example;
 
 
+import org.example.api.ClientEndpoint;
 import org.glassfish.tyrus.client.ClientManager;
 
 import javax.websocket.DeploymentException;
