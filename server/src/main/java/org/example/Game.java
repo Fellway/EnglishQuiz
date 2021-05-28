@@ -2,17 +2,13 @@ package org.example;
 
 
 import com.english.quiz.dto.AnswerMessage;
-import com.english.quiz.dto.EndGameMessage;
 import com.english.quiz.dto.MessageType;
 import org.example.factory.MessageDescriptor;
-import org.example.factory.MessageFactory;
 import org.example.model.db.QuestionEntity;
 import org.example.service.QuestionService;
 import org.example.utils.ClientMessageSender;
 
 import javax.websocket.Session;
-import java.sql.Time;
-import java.sql.Timestamp;
 import java.time.Duration;
 import java.time.Instant;
 import java.time.temporal.Temporal;
@@ -56,7 +52,7 @@ public class Game {
     }
 
     private void endGame() {
-        Long finishTime = Duration.between(initialTime, Instant.now()).getSeconds();
+        Long finishTime = Duration.between(initialTime, Instant.now()).toMillis();
         final MessageDescriptor messageDescriptor = MessageDescriptor.builder()
                 .messageType(MessageType.END_GAME)
                 .points(points)

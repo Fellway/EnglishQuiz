@@ -14,7 +14,7 @@ public class EndGameMessage implements Message {
 
     @Override
     public String getContent() {
-        return "You earned " + points + " points " + "in time: " + time + " s";
+        return "You earned " + points + " points " + "in time: " + time / 1000.0 + " s";
     }
 
     @Override

@@ -1,6 +1,8 @@
 package org.example.utils;
 
 import com.google.gson.Gson;
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
 import org.example.model.db.QuestionEntity;
 
 import java.io.File;
@@ -10,6 +12,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class QuestionLoader {
+    private static final Logger LOGGER = Logger.getLogger(QuestionLoader.class);
     private static final String QUESTIONS_JSON = "questions.json";
     private static final Gson gson = new Gson();
 
@@ -18,7 +21,7 @@ public class QuestionLoader {
             final QuestionEntity[] a = gson.fromJson(Files.readString(getFile().toPath()), QuestionEntity[].class);
             return Arrays.asList(a);
         } catch (IOException e) {
-            e.printStackTrace();
+            LOGGER.log(Level.ERROR, "Cannot read file: " + QUESTIONS_JSON);
         }
         return null;
     }

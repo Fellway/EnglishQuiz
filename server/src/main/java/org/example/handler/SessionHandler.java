@@ -1,5 +1,8 @@
 package org.example.handler;
 
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
+
 import javax.websocket.Session;
 import java.io.IOException;
 import java.util.Map;
@@ -8,6 +11,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public class SessionHandler {
 
+    private static final Logger LOGGER = Logger.getLogger(SessionHandler.class);
     private static volatile SessionHandler INSTANCE;
     private final Map<Session, UUID> sessionMap;
 
@@ -27,6 +31,7 @@ public class SessionHandler {
     }
 
     public void registerConnection(final UUID userId, final Session session) {
+        LOGGER.log(Level.INFO, "Registered new connection for userId: " + userId + " and session: " + session.getId());
         sessionMap.put(session, userId);
     }
 
@@ -35,7 +40,7 @@ public class SessionHandler {
             session.close();
             sessionMap.remove(session);
         } catch (final IOException e) {
-            System.out.println("Cannot close the connection");
+            LOGGER.log(Level.ERROR, "Cannot close the connection");
         }
     }
 
