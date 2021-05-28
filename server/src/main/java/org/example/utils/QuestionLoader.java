@@ -27,7 +27,7 @@ public class QuestionLoader {
     }
 
     private static File getFile() {
-        ClassLoader classLoader = QuestionLoader.class.getClassLoader();
+        final ClassLoader classLoader = QuestionLoader.class.getClassLoader();
         return new File(classLoader.getResource(QUESTIONS_JSON).getFile());
     }
 }

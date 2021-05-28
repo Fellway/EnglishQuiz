@@ -45,7 +45,7 @@ public class Game {
 
     public void processClientAnswer(final AnswerMessage message) {
         validateAnswer(message);
-        if(questions.isEmpty()) {
+        if (questions.isEmpty()) {
             endGame();
         }
         sendQuestionToClient(questions.get(0));

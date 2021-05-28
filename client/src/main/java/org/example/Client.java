@@ -5,7 +5,6 @@ import com.english.quiz.dto.Message;
 import com.english.quiz.dto.QuestionMessage;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.example.api.ClientEndpoint;
 
 import javax.websocket.EncodeException;
 import javax.websocket.Session;
@@ -36,7 +35,7 @@ public class Client {
         try {
             session.getBasicRemote().sendObject(new AnswerMessage(message));
         } catch (IOException | EncodeException e) {
-            LOGGER.log(Level.DEBUG , "Cannot send the message");
+            LOGGER.log(Level.DEBUG, "Cannot send the message");
         }
     }
 }
