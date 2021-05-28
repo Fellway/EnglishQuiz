@@ -62,7 +62,9 @@ public class Game {
     }
 
     private void validateAnswer(final AnswerMessage message) {
-        final Optional<Double> min = askedQuestion.getAnswers().stream().map(answer -> Levenshtein.calculate(answer, message.getContent())).min(Comparator.naturalOrder());
+        final Optional<Double> min = askedQuestion.getAnswers().stream()
+                .map(answer -> Levenshtein.calculate(answer, message.getContent().toLowerCase()))
+                .min(Comparator.naturalOrder());
         if (min.isPresent()) {
             if (min.get() == 1.0) {
                 points += 0.5;
