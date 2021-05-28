@@ -1,0 +1,68 @@
+[
+  {
+    "question": "smażony",
+    "answers": [
+      "fried"
+    ]
+  },
+  {
+    "question": "gotowany",
+    "answers": [
+      "cooked",
+      "boiled"
+    ]
+  },
+  {
+    "question": "przygoda",
+    "answers": [
+      "adventure"
+    ]
+  },
+  {
+    "question": "prawnik",
+    "answers": [
+      "lawyer",
+      "man of law"
+    ]
+  },
+  {
+    "question": "krok",
+    "answers": [
+      "step",
+      "move"
+    ]
+  },
+  {
+    "question": "finanse",
+    "answers": [
+      "finances",
+      "finance",
+      "funds"
+    ]
+  },
+  {
+    "question": "wojna",
+    "answers": [
+      "war"
+    ]
+  },
+  {
+    "question": "zderzenie",
+    "answers": [
+      "collision"
+    ]
+  },
+  {
+    "question": "niespodziewany",
+    "answers": [
+      "unexpected",
+      "sudden"
+    ]
+  },
+  {
+    "question": "późno",
+    "answers": [
+      "late"
+    ]
+  }
+]

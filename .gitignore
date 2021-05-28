@@ -1,0 +1,9 @@
+/.idea/
+/client/client.iml
+/client/target/
+target\
+/server/server.iml
+/server/target/
+/shared/shared.iml
+/shared/target/
+/root-pom.iml
