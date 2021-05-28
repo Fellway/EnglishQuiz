@@ -1,8 +1,8 @@
 package org.example;
 
+import com.english.quiz.dto.ClientMessage;
 import com.english.quiz.dto.Message;
 import com.google.gson.Gson;
-import com.english.quiz.dto.ClientMessage;
 
 public class MessageDecoder {
 

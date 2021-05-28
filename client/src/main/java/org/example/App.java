@@ -13,12 +13,10 @@ import java.util.concurrent.CountDownLatch;
 
 /**
  * Hello world!
- *
  */
-public class App 
-{
-    public static void main( String[] args ) {
-          CountDownLatch latch = new CountDownLatch(1);
+public class App {
+    public static void main(String[] args) {
+        CountDownLatch latch = new CountDownLatch(1);
 
         final ClientManager client = ClientManager.createClient();
 

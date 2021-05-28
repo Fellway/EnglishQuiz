@@ -20,7 +20,7 @@ public class Client {
 
     public void proceedMessage(final Message message) throws IOException {
         System.out.println(message.getContent());
-        if(message instanceof QuestionMessage) {
+        if (message instanceof QuestionMessage) {
             final BufferedReader bufferRead = new BufferedReader(new InputStreamReader(System.in));
             System.out.println("Enter answer: ");
             String answer = bufferRead.readLine();

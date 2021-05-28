@@ -1,9 +1,9 @@
 package org.example;
 
-import com.google.gson.Gson;
 import com.english.quiz.dto.Message;
 import com.english.quiz.dto.QuestionMessage;
 import com.english.quiz.dto.WelcomeMessage;
+import com.google.gson.Gson;
 
 public class MessageDecoder {
     private final Gson gson = new Gson();

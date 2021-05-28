@@ -1,8 +1,8 @@
 package org.example;
 
+import com.english.quiz.dto.Message;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import com.english.quiz.dto.Message;
 
 import javax.websocket.*;
 import java.io.IOException;

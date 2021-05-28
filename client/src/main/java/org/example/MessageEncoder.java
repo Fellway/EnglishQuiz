@@ -1,7 +1,7 @@
 package org.example;
 
-import com.google.gson.Gson;
 import com.english.quiz.dto.Message;
+import com.google.gson.Gson;
 
 import javax.websocket.Encoder;
 import javax.websocket.EndpointConfig;
